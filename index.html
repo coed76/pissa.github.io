@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación de Ciencias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .pregunta {
+      margin-bottom: 20px;
+    }
+    .reloj {
+      font-size: 24px;
+      font-weight: bold;
+      color: green;
+    }
+    .boton {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .boton:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>Evaluación de Ciencias</h1>
+  <p>Ingrese su NIE:</p>
+  <input type="text" id="nie" value="123456">
+  <div class="pregunta">
+    1. ¿Cuál es el proceso por el cual las plantas convierten la energía solar en energía química?
+    <select id="pregunta1">
+      <option value="a">Fotosíntesis</option>
+      <option value="b">Respiración celular</option>
+      <option value="c">Fermentación</option>
+      <option value="d">Transpiración</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    2. ¿Qué es el ADN y qué función cumple en la célula?
+    <select id="pregunta2">
+      <option value="a">Es un ácido que se encuentra en la célula y ayuda a la digestión</option>
+      <option value="b">Es un ácido que se encuentra en la célula y contiene la información genética</option>
+      <option value="c">Es un ácido que se encuentra en la célula y ayuda a la síntesis de proteínas</option>
+      <option value="d">Es un ácido que se encuentra en la célula y ayuda a la respiración celular</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    3. ¿Cuál es el papel de las mitocondrias en la célula?
+    <select id="pregunta3">
+      <option value="a">Sintetizar proteínas</option>
+      <option value="b">Almacenar energía</option>
+      <option value="c">Realizar la fotosíntesis</option>
+      <option value="d">Regular la temperatura</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    4. ¿Qué es la selección natural y cómo funciona?
+    <select id="pregunta4">
+      <option value="a">Es el proceso por el cual los organismos se adaptan a su entorno</option>
+      <option value="b">Es el proceso por el cual los organismos se reproducen</option>
+      <option value="c">Es el proceso por el cual los organismos se alimentan</option>
+      <option value="d">Es el proceso por el cual los organismos se extinguen</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    5. ¿Cuál es la diferencia entre una célula procariota y una célula eucariota?
+    <select id="pregunta5">
+      <option value="a">La célula procariota tiene un núcleo y la célula eucariota no</option>
+      <option value="b">La célula procariota no tiene un núcleo y la célula eucariota sí</option>
+      <option value="c">La célula procariota tiene mitocondrias y la célula eucariota no</option>
+      <option value="d">La célula procariota no tiene mitocondrias y la célula eucariota sí</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    6. ¿Cuál es la ley de la gravitación universal de Newton?
+    <select id="pregunta6">
+      <option value="a">La fuerza de la gravedad es proporcional a la masa de los objetos</option>
+      <option value="b">La fuerza de la gravedad es proporcional a la distancia entre los objetos</option>
+      <option value="c">La fuerza de la gravedad es proporcional a la velocidad de los objetos</option>
+      <option value="d">La fuerza de la gravedad es proporcional a la aceleración de los objetos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    7. ¿Qué es la energía cinética y cómo se relaciona con la velocidad de un objeto?
+    <select id="pregunta7">
+      <option value="a">La energía cinética es la energía que un objeto tiene debido a su velocidad</option>
+      <option value="b">La energía cinética es la energía que un objeto tiene debido a su posición</option>
+      <option value="c">La energía cinética es la energía que un objeto tiene debido a su masa</option>
+      <option value="d">La energía cinética es la energía que un objeto tiene debido a su volumen</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    8. ¿Cuál es el principio de conservación de la energía?
+    <select id="pregunta8">
+      <option value="a">La energía se crea y se destruye en un sistema cerrado</option>
+      <option value="b">La energía se conserva en un sistema cerrado</option>
+      <option value="c">La energía se transforma de una forma a otra en un sistema cerrado</option>
+      <option value="d">La energía se disipa en un sistema cerrado</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    9. ¿Qué es la fuerza de fricción y cómo se relaciona con la velocidad de un objeto?
+    <select id="pregunta9">
+      <option value="a">La fuerza de fricción es una fuerza que se opone al movimiento de un objeto</option>
+      <option value="b">La fuerza de fricción es una fuerza que ayuda al movimiento de un objeto</option>
+      <option value="c">La fuerza de fricción es una fuerza que no afecta al movimiento de un objeto</option>
+      <option value="d">La fuerza de fricción es una fuerza que depende de la velocidad del objeto</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    10. ¿Cuál es la diferencia entre una onda longitudinal y una onda transversal?
+    <select id="pregunta10">
+      <option value="a">Una onda longitudinal se propaga en la dirección de la vibración y una onda transversal se propaga perpendicular a la vibración</option>
+      <option value="b">Una onda longitudinal se propaga perpendicular a la vibración y una onda transversal se propaga en la dirección de la vibración</option>
+      <option value="c">Una onda longitudinal tiene una frecuencia mayor que una onda transversal</option>
+      <option value="d">Una onda longitudinal tiene una amplitud mayor que una onda transversal</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    11. ¿Cuál es la ley de la conservación de la masa?
+    <select id="pregunta11">
+      <option value="a">La masa se crea y se destruye en una reacción química</option>
+      <option value="b">La masa se conserva en una reacción química</option>
+      <option value="c">La masa se transforma de una sustancia a otra en una reacción química</option>
+      <option value="d">La masa se disipa en una reacción química</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    12. ¿Qué es un átomo y qué partes lo componen?
+    <select id="pregunta12">
+      <option value="a">Un átomo es la unidad más pequeña de una sustancia y está compuesto por protones, neutrones y electrones</option>
+      <option value="b">Un átomo es la unidad más pequeña de una sustancia y está compuesto por protones y neutrones</option>
+      <option value="c">Un átomo es la unidad más pequeña de una sustancia y está compuesto por electrones y protones</option>
+      <option value="d">Un átomo es la unidad más pequeña de una sustancia y está compuesto por electrones y neutrones</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    13. ¿Cuál es la diferencia entre un elemento y un compuesto?
+    <select id="pregunta13">
+      <option value="a">Un elemento es una sustancia que está compuesta por un solo tipo de átomo y un compuesto es una sustancia que está compuesta por varios tipos de átomos</option>
+      <option value="b">Un elemento es una sustancia que está compuesta por varios tipos de átomos y un compuesto es una sustancia que está compuesta por un solo tipo de átomo</option>
+      <option value="c">Un elemento es una sustancia que tiene propiedades químicas y un compuesto es una sustancia que no tiene propiedades químicas</option>
+      <option value="d">Un elemento es una sustancia que no tiene propiedades químicas y un compuesto es una sustancia que tiene propiedades químicas</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    14. ¿Qué es la tabla periódica y qué información proporciona?
+    <select id="pregunta14">
+      <option value="a">La tabla periódica es una tabla que muestra la relación entre los elementos y sus propiedades químicas</option>
+      <option value="b">La tabla periódica es una tabla que muestra la relación entre los elementos y sus propiedades físicas</option>
+      <option value="c">La tabla periódica es una tabla que muestra la relación entre los elementos y su estructura atómica</option>
+      <option value="d">La tabla periódica es una tabla que muestra la relación entre los elementos y su abundancia en la naturaleza</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    15. ¿Cuál es el proceso de formación de un enlace químico?
+    <select id="pregunta15">
+      <option value="a">La formación de un enlace químico implica la transferencia de electrones entre átomos</option>
+      <option value="b">La formación de un enlace químico implica la compartición de electrones entre átomos</option>
+      <option value="c">La formación de un enlace químico implica la pérdida de electrones por parte de un átomo</option>
+      <option value="d">La formación de un enlace químico implica la ganancia de electrones por parte de un átomo</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    16. ¿Cuál es la teoría de la tectónica de placas?
+    <select id="pregunta16">
+      <option value="a">La teoría de la tectónica de placas sostiene que la corteza terrestre está dividida en placas que se mueven</option>
+      <option value="b">La teoría de la tectónica de placas sostiene que la corteza terrestre está dividida en placas que no se mueven</option>
+      <option value="c">La teoría de la tectónica de placas sostiene que la corteza terrestre está compuesta por un solo bloque</option>
+      <option value="d">La teoría de la tectónica de placas sostiene que la corteza terrestre está compuesta por varios bloques</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    17. ¿Qué es el ciclo del agua y qué etapas lo componen?
+    <select id="pregunta17">
+      <option value="a">El ciclo del agua es el proceso por el cual el agua se evapora, condensa y precipita</option>
+      <option value="b">El ciclo del agua es el proceso por el cual el agua se evapora, condensa y se filtra</option>
+      <option value="c">El ciclo del agua es el proceso por el cual el agua se evapora, se filtra y precipita</option>
+      <option value="d">El ciclo del agua es el proceso por el cual el agua se condensa, se filtra y precipita</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    18. ¿Cuál es la diferencia entre un clima y un tiempo?
+    <select id="pregunta18">
+      <option value="a">Un clima es el patrón de condiciones atmosféricas en un lugar durante un período largo de tiempo y un tiempo es el estado actual de la atmósfera</option>
+      <option value="b">Un clima es el estado actual de la atmósfera y un tiempo es el patrón de condiciones atmosféricas en un lugar durante un período largo de tiempo</option>
+      <option value="c">Un clima es el patrón de condiciones atmosféricas en un lugar durante un período corto de tiempo y un tiempo es el estado actual de la atmósfera</option>
+      <option value="d">Un clima es el estado actual de la atmósfera y un tiempo es el patrón de condiciones atmosféricas en un lugar durante un período corto de tiempo</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    19. ¿Qué es la erosión y qué tipos de erosión existen?
+    <select id="pregunta19">
+      <option value="a">La erosión es el proceso por el cual la superficie terrestre se desgasta y existen tres tipos de erosión: hídrica, eólica y glaciar</option>
+      <option value="b">La erosión es el proceso por el cual la superficie terrestre se desgasta y existen dos tipos de erosión: hídrica y eólica</option>
+      <option value="c">La erosión es el proceso por el cual la superficie terrestre se desgasta y existe un solo tipo de erosión: glaciar</option>
+      <option value="d">La erosión es el proceso por el cual la superficie terrestre se desgasta y no existen tipos de erosión</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    20. ¿Cuál es la teoría del Big Bang y qué evidencias la respaldan?
+    <select id="pregunta20">
+      <option value="a">La teoría del Big Bang sostiene que el universo se originó a partir de una explosión y las evidencias que la respaldan son la expansión del universo y la radiación cósmica de fondo</option>
+      <option value="b">La teoría del Big Bang sostiene que el universo se originó a partir de una explosión y las evidencias que la respaldan son la gravedad y la materia oscura</option>
+      <option value="c">La teoría del Big Bang sostiene que el universo se originó a partir de una explosión y las evidencias que la respaldan son la energía y la materia</option>
+      <option value="d">La teoría del Big Bang sostiene que el universo se originó a partir de una explosión y no existen evidencias que la respalden</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    21. ¿Cuál es el concepto de desarrollo sostenible y qué implica?
+    <select id="pregunta21">
+      <option value="a">El desarrollo sostenible es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras</option>
+      <option value="b">El desarrollo sostenible es el uso de los recursos naturales de manera que se satisfagan las necesidades futuras sin comprometer las necesidades actuales</option>
+      <option value="c">El desarrollo sostenible es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales y futuras</option>
+      <option value="d">El desarrollo sostenible es el uso de los recursos naturales de manera que no se satisfagan las necesidades actuales ni futuras</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    22. ¿Qué es el cambio climático y qué causas lo producen?
+    <select id="pregunta22">
+      <option value="a">El cambio climático es el aumento de la temperatura global debido a la emisión de gases de efecto invernadero</option>
+      <option value="b">El cambio climático es el aumento de la temperatura global debido a la deforestación</option>
+      <option value="c">El cambio climático es el aumento de la temperatura global debido a la contaminación del aire</option>
+      <option value="d">El cambio climático es el aumento de la temperatura global debido a la sobreexplotación de los recursos naturales</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    23. ¿Cuál es el impacto del cambio climático en la biodiversidad?
+    <select id="pregunta23">
+      <option value="a">El cambio climático puede causar la extinción de especies y la pérdida de hábitat</option>
+      <option value="b">El cambio climático puede causar la migración de especies y la alteración de los ecosistemas</option>
+      <option value="c">El cambio climático puede causar la alteración de los patrones climáticos y la pérdida de biodiversidad</option>
+      <option value="d">El cambio climático no tiene impacto en la biodiversidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    24. ¿Qué es la energía renovable y qué tipos de energía renovable existen?
+    <select id="pregunta24">
+      <option value="a">La energía renovable es la energía que se obtiene de fuentes naturales y existen varios tipos, como la energía solar, la energía eólica y la energía hidroeléctrica</option>
+      <option value="b">La energía renovable es la energía que se obtiene de fuentes naturales y solo existe un tipo, la energía solar</option>
+      <option value="c">La energía renovable es la energía que se obtiene de fuentes naturales y solo existen dos tipos, la energía eólica y la energía hidroeléctrica</option>
+      <option value="d">La energía renovable no es una fuente de energía viable</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    25. ¿Cuál es el papel de la tecnología en la reducción del impacto ambiental?
+    <select id="pregunta25">
+      <option value="a">La tecnología puede ayudar a reducir el impacto ambiental mediante la eficiencia energética y la reducción de residuos</option>
+      <option value="b">La tecnología no puede ayudar a reducir el impacto ambiental</option>
+      <option value="c">La tecnología solo puede ayudar a reducir el impacto ambiental mediante la eficiencia energética</option>
+      <option value="d">La tecnología solo puede ayudar a reducir el impacto ambiental mediante la reducción de residuos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    26. ¿Qué es la educación ambiental y por qué es importante?
+    <select id="pregunta26">
+      <option value="a">La educación ambiental es el proceso de enseñanza y aprendizaje sobre la conservación del medio ambiente y es importante para promover la conciencia y la acción ambiental</option>
+      <option value="b">La educación ambiental es el proceso de enseñanza y aprendizaje sobre la conservación del medio ambiente y no es importante</option>
+      <option value="c">La educación ambiental es el proceso de enseñanza y aprendizaje sobre la conservación del medio ambiente y solo es importante para los niños</option>
+      <option value="d">La educación ambiental es el proceso de enseñanza y aprendizaje sobre la conservación del medio ambiente y solo es importante para los adultos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    27. ¿Cuál es el papel de la comunidad en la conservación del medio ambiente?
+    <select id="pregunta27">
+      <option value="a">La comunidad puede jugar un papel importante en la conservación del medio ambiente mediante la participación en actividades de conservación y la promoción de la conciencia ambiental</option>
+      <option value="b">La comunidad no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La comunidad solo puede jugar un papel importante en la conservación del medio ambiente mediante la participación en actividades de conservación</option>
+      <option value="d">La comunidad solo puede jugar un papel importante en la conservación del medio ambiente mediante la promoción de la conciencia ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    28. ¿Qué es la gestión de residuos y por qué es importante?
+    <select id="pregunta28">
+      <option value="a">La gestión de residuos es el proceso de recolección, tratamiento y disposición de residuos y es importante para reducir el impacto ambiental y promover la salud pública</option>
+      <option value="b">La gestión de residuos es el proceso de recolección, tratamiento y disposición de residuos y no es importante</option>
+      <option value="c">La gestión de residuos es el proceso de recolección, tratamiento y disposición de residuos y solo es importante para reducir el impacto ambiental</option>
+      <option value="d">La gestión de residuos es el proceso de recolección, tratamiento y disposición de residuos y solo es importante para promover la salud pública</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    29. ¿Cuál es el papel de la política en la conservación del medio ambiente?
+    <select id="pregunta29">
+      <option value="a">La política puede jugar un papel importante en la conservación del medio ambiente mediante la creación de leyes y regulaciones que promuevan la protección del medio ambiente</option>
+      <option value="b">La política no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La política solo puede jugar un papel importante en la conservación del medio ambiente mediante la creación de leyes</option>
+      <option value="d">La política solo puede jugar un papel importante en la conservación del medio ambiente mediante la creación de regulaciones</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    30. ¿Qué es la cooperación internacional y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta30">
+      <option value="a">La cooperación internacional es el proceso de colaboración entre países para abordar problemas globales y es importante para la conservación del medio ambiente porque permite la coordinación de esfuerzos y la compartición de recursos</option>
+      <option value="b">La cooperación internacional es el proceso de colaboración entre países para abordar problemas globales y no es importante para la conservación del medio ambiente</option>
+      <option value="c">La cooperación internacional es el proceso de colaboración entre países para abordar problemas globales y solo es importante para la conservación del medio ambiente porque permite la coordinación de esfuerzos</option>
+      <option value="d">La cooperación internacional es el proceso de colaboración entre países para abordar problemas globales y solo es importante para la conservación del medio ambiente porque permite la compartición de recursos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    31. ¿Cuál es el papel de la ciencia en la conservación del medio ambiente?
+    <select id="pregunta31">
+      <option value="a">La ciencia puede jugar un papel importante en la conservación del medio ambiente mediante la investigación y el desarrollo de tecnologías que promuevan la protección del medio ambiente</option>
+      <option value="b">La ciencia no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La ciencia solo puede jugar un papel importante en la conservación del medio ambiente mediante la investigación</option>
+      <option value="d">La ciencia solo puede jugar un papel importante en la conservación del medio ambiente mediante el desarrollo de tecnologías</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    32. ¿Qué es la tecnología verde y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta32">
+      <option value="a">La tecnología verde es la tecnología que promueve la protección del medio ambiente y es importante porque reduce el impacto ambiental y promueve la sostenibilidad</option>
+      <option value="b">La tecnología verde es la tecnología que promueve la protección del medio ambiente y no es importante</option>
+      <option value="c">La tecnología verde es la tecnología que promueve la protección del medio ambiente y solo es importante porque reduce el impacto ambiental</option>
+      <option value="d">La tecnología verde es la tecnología que promueve la protección del medio ambiente y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    33. ¿Cuál es el papel de la educación en la conservación del medio ambiente?
+    <select id="pregunta33">
+      <option value="a">La educación puede jugar un papel importante en la conservación del medio ambiente mediante la enseñanza de la conciencia ambiental y la promoción de la acción ambiental</option>
+      <option value="b">La educación no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La educación solo puede jugar un papel importante en la conservación del medio ambiente mediante la enseñanza de la conciencia ambiental</option>
+      <option value="d">La educación solo puede jugar un papel importante en la conservación del medio ambiente mediante la promoción de la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    34. ¿Qué es la participación comunitaria y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta34">
+      <option value="a">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y es importante porque promueve la conciencia ambiental y la acción ambiental</option>
+      <option value="b">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y no es importante</option>
+      <option value="c">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la conciencia ambiental</option>
+      <option value="d">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    35. ¿Cuál es el papel de la cooperación internacional en la conservación del medio ambiente?
+    <select id="pregunta35">
+      <option value="a">La cooperación internacional puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos y la compartición de recursos</option>
+      <option value="b">La cooperación internacional no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos</option>
+      <option value="d">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la compartición de recursos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    36. ¿Qué es la sostenibilidad y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta36">
+      <option value="a">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    37. ¿Cuál es el papel de la tecnología en la reducción del impacto ambiental?
+    <select id="pregunta37">
+      <option value="a">La tecnología puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética y la reducción de residuos</option>
+      <option value="b">La tecnología no puede jugar un papel importante en la reducción del impacto ambiental</option>
+      <option value="c">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética</option>
+      <option value="d">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la reducción de residuos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    38. ¿Qué es la gestión de recursos naturales y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta38">
+      <option value="a">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    39. ¿Cuál es el papel de la educación en la promoción de la conciencia ambiental?
+    <select id="pregunta39">
+      <option value="a">La educación puede jugar un papel importante en la promoción de la conciencia ambiental mediante la enseñanza de la conciencia ambiental y la promoción de la acción ambiental</option>
+      <option value="b">La educación no puede jugar un papel importante en la promoción de la conciencia ambiental</option>
+      <option value="c">La educación solo puede jugar un papel importante en la promoción de la conciencia ambiental mediante la enseñanza de la conciencia ambiental</option>
+      <option value="d">La educación solo puede jugar un papel importante en la promoción de la conciencia ambiental mediante la promoción de la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    40. ¿Qué es la participación comunitaria y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta40">
+      <option value="a">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y es importante porque promueve la conciencia ambiental y la acción ambiental</option>
+      <option value="b">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y no es importante</option>
+      <option value="c">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la conciencia ambiental</option>
+      <option value="d">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    41. ¿Cuál es el papel de la cooperación internacional en la conservación del medio ambiente?
+    <select id="pregunta41">
+      <option value="a">La cooperación internacional puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos y la compartición de recursos</option>
+      <option value="b">La cooperación internacional no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos</option>
+      <option value="d">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la compartición de recursos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    42. ¿Qué es la sostenibilidad y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta42">
+      <option value="a">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    43. ¿Cuál es el papel de la tecnología en la reducción del impacto ambiental?
+    <select id="pregunta43">
+      <option value="a">La tecnología puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética y la reducción de residuos</option>
+      <option value="b">La tecnología no puede jugar un papel importante en la reducción del impacto ambiental</option>
+      <option value="c">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética</option>
+      <option value="d">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la reducción de residuos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    44. ¿Qué es la gestión de recursos naturales y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta44">
+      <option value="a">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    45. ¿Cuál es el papel de la educación en la promoción de la conciencia ambiental?
+    <select id="pregunta45">
+      <option value="a">La educación puede jugar un papel importante en la promoción de la conciencia ambiental mediante la enseñanza de la conciencia ambiental y la promoción de la acción ambiental</option>
+      <option value="b">La educación no puede jugar un papel importante en la promoción de la conciencia ambiental</option>
+      <option value="c">La educación solo puede jugar un papel importante en la promoción de la conciencia ambiental mediante la enseñanza de la conciencia ambiental</option>
+      <option value="d">La educación solo puede jugar un papel importante en la promoción de la conciencia ambiental mediante la promoción de la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    46. ¿Qué es la participación comunitaria y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta46">
+      <option value="a">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y es importante porque promueve la conciencia ambiental y la acción ambiental</option>
+      <option value="b">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y no es importante</option>
+      <option value="c">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la conciencia ambiental</option>
+      <option value="d">La participación comunitaria es el proceso de involucramiento de la comunidad en la conservación del medio ambiente y solo es importante porque promueve la acción ambiental</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    47. ¿Cuál es el papel de la cooperación internacional en la conservación del medio ambiente?
+    <select id="pregunta47">
+      <option value="a">La cooperación internacional puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos y la compartición de recursos</option>
+      <option value="b">La cooperación internacional no puede jugar un papel importante en la conservación del medio ambiente</option>
+      <option value="c">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la coordinación de esfuerzos</option>
+      <option value="d">La cooperación internacional solo puede jugar un papel importante en la conservación del medio ambiente mediante la compartición de recursos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    48. ¿Qué es la sostenibilidad y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta48">
+      <option value="a">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La sostenibilidad es el uso de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    49. ¿Cuál es el papel de la tecnología en la reducción del impacto ambiental?
+    <select id="pregunta49">
+      <option value="a">La tecnología puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética y la reducción de residuos</option>
+      <option value="b">La tecnología no puede jugar un papel importante en la reducción del impacto ambiental</option>
+      <option value="c">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la eficiencia energética</option>
+      <option value="d">La tecnología solo puede jugar un papel importante en la reducción del impacto ambiental mediante la reducción de residuos</option>
+    </select>
+  </div>
+  <div class="pregunta">
+    50. ¿Qué es la gestión de recursos naturales y por qué es importante para la conservación del medio ambiente?
+    <select id="pregunta50">
+      <option value="a">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y es importante porque promueve la protección del medio ambiente y la sostenibilidad</option>
+      <option value="b">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y no es importante</option>
+      <option value="c">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la protección del medio ambiente</option>
+      <option value="d">La gestión de recursos naturales es el proceso de uso y conservación de los recursos naturales de manera que se satisfagan las necesidades actuales sin comprometer las necesidades futuras y solo es importante porque promueve la sostenibilidad</option>
+    </select>
+  </div>
+  <button class="boton" id="enviar">Enviar</button>
+  <p>Tiempo restante: <span class="reloj" id="tiempo">59:00</span></p>
+
+  <script>
+    var tiempoRestante = 59 * 60; // 59 minutos
+    var intervalo = setInterval(function() {
+      tiempoRestante--;
+      var minutos = Math.floor(tiempoRestante / 60);
+      var segundos = tiempoRestante % 60;
+      document.getElementById("tiempo").innerHTML = minutos + ":" + segundos;
+      if (tiempoRestante <= 0) {
+        clearInterval(intervalo);
+        document.getElementById("enviar").disabled = true;
+      }
+      if (tiempoRestante <= 30 * 60) {
+        document.getElementById("tiempo").style.color = "yellow";
+      }
+      if (tiempoRestante <= 10 * 60) {
+        document.getElementById("tiempo").style.color = "red";
+      }
+    }, 1000);
+
+    document.getElementById("enviar").addEventListener("click", function() {
+      var respuestas = [];
+      for (var i = 1; i <= 50; i++) {
+        var pregunta = document.getElementById("pregunta" + i);
+        respuestas.push(pregunta.value);
+      }
+      // Enviar respuestas al servidor
+      // ...
+      var nota = 0;
+      for (var i = 0; i < respuestas.length; i++) {
+        if (respuestas[i] === "a") {
+          nota += 0.2;
+        }
+      }
+      alert("Nota final: " + nota + "/10");
+    });
+  </script>
+</body>
+</html>
